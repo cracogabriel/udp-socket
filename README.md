@@ -30,13 +30,13 @@ q1/
 
 Open **two terminals** at the project root.
 
-**Terminal 1 — Peer A:**
+**Terminal 1: Peer A:**
 
 ```bash
 python chat_udp.py 127.0.0.1 5000 127.0.0.1 5001
 ```
 
-**Terminal 2 — Peer B:**
+**Terminal 2: Peer B:**
 
 ```bash
 python chat_udp.py 127.0.0.1 5001 127.0.0.1 5000
@@ -105,8 +105,8 @@ Peer A  <--MSG_ECHO_RES--  Peer B   (Peer B confirms and does not reply again)
 
 Each peer runs **two concurrent execution flows**:
 
-- **Main thread** — blocked on `input()`, reads user commands and sends packets
-- **Receiver thread** — blocked on `recvfrom()`, listens for incoming packets and prints them
+- **Main thread**: blocked on `input()`, reads user commands and sends packets
+- **Receiver thread**: blocked on `recvfrom()`, listens for incoming packets and prints them
 
 The receiver thread is started as a `daemon`, meaning it is automatically terminated when the main thread exits.
 
