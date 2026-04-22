@@ -18,3 +18,5 @@ Thumbs.db
 .idea/
 
 **/server.log
+
+q2/server-storage/*
